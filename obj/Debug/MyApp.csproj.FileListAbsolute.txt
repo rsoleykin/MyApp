@@ -1,0 +1,8 @@
+D:\Download\MyApp\bin\Debug\MyApp.exe.config
+D:\Download\MyApp\bin\Debug\MyApp.exe
+D:\Download\MyApp\bin\Debug\MyApp.pdb
+D:\Download\MyApp\obj\Debug\MyApp.csprojResolveAssemblyReference.cache
+D:\Download\MyApp\obj\Debug\MyApp.Form1.resources
+D:\Download\MyApp\obj\Debug\MyApp.csproj.GenerateResource.Cache
+D:\Download\MyApp\obj\Debug\MyApp.exe
+D:\Download\MyApp\obj\Debug\MyApp.pdb
