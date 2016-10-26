@@ -51,9 +51,9 @@
             this.locationLabel.Location = new System.Drawing.Point(9, 42);
             this.locationLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.locationLabel.Name = "locationLabel";
-            this.locationLabel.Size = new System.Drawing.Size(252, 17);
+            this.locationLabel.Size = new System.Drawing.Size(245, 17);
             this.locationLabel.TabIndex = 1;
-            this.locationLabel.Text = "Executing Assembly Location Changed";
+            this.locationLabel.Text = "Executing Assembly Location from Git";
             // 
             // versionLabel
             // 
