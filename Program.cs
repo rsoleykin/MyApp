@@ -15,10 +15,6 @@ namespace MyApp
         [STAThread]
         static void Main()
         {
-            //using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/rsoleykin/MyApp"))
-            //{
-            //    mgr.Result.UpdateApp();
-            //}
 
             //new TaskFactory().StartNew(async () =>
             //        {
@@ -31,7 +27,7 @@ namespace MyApp
 
             new TaskFactory().StartNew(async () =>
                     {
-                        using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/rsoleykin/MyApp"))
+                        using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/rsoleykin/MyApp/releases/latest"))
                         {
                             await mgr.Result.UpdateApp();
                         }
