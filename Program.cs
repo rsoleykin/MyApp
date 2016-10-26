@@ -7,6 +7,8 @@ using Squirrel;
 
 namespace MyApp
 {
+    using System.Net;
+
     static class Program
     {
         /// <summary>
@@ -18,16 +20,15 @@ namespace MyApp
 
             //new TaskFactory().StartNew(async () =>
             //        {
-            //            using (var mgr = new UpdateManager("D:\\Download\\MyApp\\Releases"))
+            //            using (var mgr = new UpdateManager("D:\\Download\\MyApp\\Releases", rootDirectory: "C:\\Program Files (x86)\\TestingFolder"))
             //            {
             //                await mgr.UpdateApp();
             //            }
-            //        });
-
+            //});
 
             new TaskFactory().StartNew(async () =>
                     {
-                        using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/rsoleykin/MyApp/releases/latest"))
+                        using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/rsoleykin/MyApp/releases/latest", rootDirectory: "C:\\Program Files (x86)\\TestingFolder"))
                         {
                             await mgr.Result.UpdateApp();
                         }
