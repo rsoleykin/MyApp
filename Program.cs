@@ -18,21 +18,24 @@ namespace MyApp
         static void Main()
         {
 
-            //new TaskFactory().StartNew(async () =>
-            //        {
-            //            using (var mgr = new UpdateManager("D:\\Download\\MyApp\\Releases", rootDirectory: "C:\\Program Files (x86)\\TestingFolder"))
-            //            {
-            //                await mgr.UpdateApp();
-            //            }
-            //});
-
             new TaskFactory().StartNew(async () =>
                     {
-                        using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/rsoleykin/MyApp/releases/latest", rootDirectory: "C:\\Program Files (x86)\\TestingFolder"))
+                        using (var mgr = new UpdateManager("D:\\Download\\MyApp\\Releases", "D:\\Download\\SomeTest", "Renat App", new FileDownloader(new WebClient()
+                                                                                                                                                          {
+                                                                                                                                                              
+                                                                                                                                                          })))
                         {
-                            await mgr.Result.UpdateApp();
+                            await mgr.UpdateApp();
                         }
                     });
+
+            //new TaskFactory().StartNew(async () =>
+            //        {
+            //            using (var mgr = UpdateManager.GitHubUpdateManager("https://github.com/rsoleykin/MyApp/releases/latest", rootDirectory: "C:\\Program Files (x86)\\TestingFolder"))
+            //            {
+            //                await mgr.Result.UpdateApp();
+            //            }
+            //        });
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
