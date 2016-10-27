@@ -20,10 +20,7 @@ namespace MyApp
 
             new TaskFactory().StartNew(async () =>
                     {
-                        using (var mgr = new UpdateManager("D:\\Download\\MyApp\\Releases", "D:\\Download\\SomeTest", "Renat App", new FileDownloader(new WebClient()
-                                                                                                                                                          {
-                                                                                                                                                              
-                                                                                                                                                          })))
+                        using (var mgr = new UpdateManager("D:\\Download\\MyApp\\Releases", "D:\\Download\\SomeTest", "Renat App"))
                         {
                             await mgr.UpdateApp();
                         }
